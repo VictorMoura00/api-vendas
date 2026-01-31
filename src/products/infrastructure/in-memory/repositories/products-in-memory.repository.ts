@@ -1,8 +1,11 @@
 import { InMemoryRepository } from '@/common/domain/repositories/in-memory.repository'
-import { ProductModel } from '@/products/domain/models/poducts.model'
-import { ProductId, ProductsRepository } from '../../products.repository'
+import { ProductModel } from '@/products/domain/models/products.model'
 import { NotFoundError } from '@/common/domain/error/not-found-error'
 import { ConflictError } from '@/common/domain/error/conflict-error'
+import {
+  ProductId,
+  ProductsRepository,
+} from '../../../domain/repositories/products.repository'
 
 export class ProductsInMemoryRepository
   extends InMemoryRepository<ProductModel>

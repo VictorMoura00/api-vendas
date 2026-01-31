@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { ProductModel } from '@/products/domain/models/poducts.model'
+import { ProductModel } from '@/products/domain/models/products.model'
 import {
   Column,
   CreateDateColumn,
