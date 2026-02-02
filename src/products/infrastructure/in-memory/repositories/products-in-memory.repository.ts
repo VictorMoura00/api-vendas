@@ -1,7 +1,7 @@
 import { InMemoryRepository } from '@/common/domain/repositories/in-memory.repository'
 import { ProductModel } from '@/products/domain/models/products.model'
-import { NotFoundError } from '@/common/domain/error/not-found-error'
-import { ConflictError } from '@/common/domain/error/conflict-error'
+import { NotFoundError } from '@/common/domain/errors/not-found-error'
+import { ConflictError } from '@/common/domain/errors/conflict-error'
 import {
   ProductId,
   ProductsRepository,

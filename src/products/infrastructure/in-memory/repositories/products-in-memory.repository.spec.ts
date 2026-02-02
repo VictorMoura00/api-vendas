@@ -1,7 +1,7 @@
-import { NotFoundError } from '@/common/domain/error/not-found-error'
+import { NotFoundError } from '@/common/domain/errors/not-found-error'
 import { ProductsInMemoryRepository } from './products-in-memory.repository'
 import { ProductsDataBuilder } from '../../testing/helpers/products-data-builder'
-import { ConflictError } from '@/common/domain/error/conflict-error'
+import { ConflictError } from '@/common/domain/errors/conflict-error'
 
 describe('ProductsInMemoryRepository unit tests', () => {
   let sut: ProductsInMemoryRepository

@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { randomUUID } from 'node:crypto'
-import { NotFoundError } from '../error/not-found-error'
+import { NotFoundError } from '../errors/not-found-error'
 import {
   RepositoryInterface,
   SearchInput,
