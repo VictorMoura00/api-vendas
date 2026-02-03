@@ -1,5 +1,6 @@
 import { BadRequestError } from '@/common/domain/errors/bad-request-error'
 import { ProductsRepository } from '@/products/domain/repositories/products.repository'
+import { injectable } from 'tsyringe'
 
 export namespace CreateProductUseCase {
   export type Input = {
@@ -16,7 +17,7 @@ export namespace CreateProductUseCase {
     created_at: Date
     updated_at: Date
   }
-
+  @injectable()
   export class UseCase {
     constructor(private productRepository: ProductsRepository) {}
 
