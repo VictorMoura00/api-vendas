@@ -1,6 +1,6 @@
 import { BadRequestError } from '@/common/domain/errors/bad-request-error'
 import { ProductsRepository } from '@/products/domain/repositories/products.repository'
-import { injectable } from 'tsyringe'
+import { inject, injectable } from 'tsyringe'
 
 export namespace CreateProductUseCase {
   export type Input = {
@@ -19,7 +19,9 @@ export namespace CreateProductUseCase {
   }
   @injectable()
   export class UseCase {
-    constructor(private productRepository: ProductsRepository) {}
+    constructor(
+      @inject('ProductRepository')
+      private productRepository: ProductsRepository) {}
 
     async execute(input: Input): Promise<Output> {
       if (!input.name || input.price <= 0 || input.quantity <= 0) {
