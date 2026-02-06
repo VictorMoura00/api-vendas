@@ -21,7 +21,8 @@ export namespace CreateProductUseCase {
   export class UseCase {
     constructor(
       @inject('ProductRepository')
-      private productRepository: ProductsRepository) {}
+      private productRepository: ProductsRepository,
+    ) {}
 
     async execute(input: Input): Promise<Output> {
       if (!input.name || input.price <= 0 || input.quantity <= 0) {
